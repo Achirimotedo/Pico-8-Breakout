@@ -27,7 +27,7 @@ function startgame()
 	points=0
 	
 	--paddle variables
-	pad_x=30
+	pad_x=50
 	pad_y=120
 	pad_dx=1.5
 	pad_w=30
@@ -44,8 +44,8 @@ end
 
 function serveball()
 		--ball variables
-	ball_x=50
-	ball_y=30
+	ball_x=40
+	ball_y=80
 	ball_dx=1
 	ball_dy=1
 	ball_r=2
@@ -57,9 +57,9 @@ function buildbricks()
 	brick_y={}
 	brick_v={}
 
-	for i=1,22 do
+	for i=1,66 do
 		add(brick_x,4+((i-1)%11)*(brick_w+2))
-		add(brick_y,20+flr(i/12)*(brick_h+2))
+		add(brick_y,20+flr((i-1)/11)*(brick_h+2))
 		add(brick_v,true)
 	end
 end
